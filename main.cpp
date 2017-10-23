@@ -10,6 +10,7 @@
 #include "seller.h"
 #include "high_seller.h"
 #include "mid_seller.h"
+#include "low_seller.h"
 #include "constants.h"
 
 using namespace std;
@@ -27,17 +28,29 @@ int main()
 
 	// size of the sellers array depends on the num of currently implemented sellers
 	// if currently have 4, enter 4; larger size will lead to segmentation faul
-	seller* sellers[4];
+	seller* sellers[10];
 
 	high_seller high_sel("High-first");
 	mid_seller mid_sel1("Medium-first");
 	mid_seller mid_sel2("Medium-second");
 	mid_seller mid_sel3("Medium-third");
+	low_seller low_sel1("Low-first");
+	low_seller low_sel2("Low-second");
+	low_seller low_sel3("Low-third");
+	low_seller low_sel4("Low-fourth");
+	low_seller low_sel5("Low-fifth");
+	low_seller low_sel6("Low-sixth");
 
 	sellers[0] = &high_sel;
 	sellers[1] = &mid_sel1;
 	sellers[2] = &mid_sel2;
 	sellers[3] = &mid_sel3;
+	sellers[4] = &low_sel1;
+	sellers[5] = &low_sel2;
+	sellers[6] = &low_sel3;
+	sellers[7] = &low_sel4;
+	sellers[8] = &low_sel5;
+	sellers[9] = &low_sel6;
 
 	for (const auto& sel : sellers)
 	{
